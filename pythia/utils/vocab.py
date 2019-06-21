@@ -120,7 +120,7 @@ class BaseVocab:
             if not os.path.exists(vocab_file):
                 raise RuntimeError("Vocab not found at " + vocab_file)
 
-            with open(vocab_file, "r",encoding="utf-8") as f:
+            with open(vocab_file, "r") as f:
                 lines = f.readlines()
                 lines = [line.decode("utf-8").strip("\n") for line in lines]
                 for line in lines:          
