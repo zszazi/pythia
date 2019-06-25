@@ -122,7 +122,7 @@ class BaseVocab:
 
             with open(vocab_file, "r",encoding="utf-8") as f:
                 lines = f.readlines()
-                lines = [line.strip("\n") for line in lines]
+                lines = [line.encode("utf-8").decode("utf-8").strip("\n") for line in lines]
                 for line in lines:          
                     self.itos[index] = line.strip()
                     self.word_dict[line.strip()] = index
